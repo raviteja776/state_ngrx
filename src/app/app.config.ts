@@ -1,5 +1,7 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideStore } from '@ngrx/store';
+import { appStore } from './store/app.store';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true })]
+  providers: [provideStore(appStore),provideZoneChangeDetection({ eventCoalescing: true })]
 };
