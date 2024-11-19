@@ -1,7 +1,9 @@
 import { createReducer, on } from "@ngrx/store";
 import { updateEmail, updateMobile, updateName } from "./userAction";
+import { UserState } from "./userModel";
 
-let initialState = {
+
+let initialState:UserState = {
     name:"",
     email:"",
     mobile:""
