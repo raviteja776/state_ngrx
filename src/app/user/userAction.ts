@@ -1,4 +1,4 @@
-export function updateName(name: any) {
+/* export function updateName(name: any) {
     return  {
         type:'updateName',
         payload:{name:name}
@@ -17,4 +17,11 @@ export function updateMobile(name: any) {
         type:'updateMobile',
         payload:{mobile:name}
     }
-}
+} */
+
+import { createAction, props } from "@ngrx/store";
+
+
+   export const updateName =   createAction('updateName', props<{name:string}>());
+   export const updateEmail =  createAction('updateEmail', props<{email:string}>());
+   export const updateMobile = createAction('updateMobile', props<{mobile:string}>());

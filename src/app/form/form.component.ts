@@ -15,16 +15,17 @@ export class FormComponent {
   }
   updateName(name:any) {
     // this.store.dispatch({type:'updateName', payload:{name:name.value}});
-    this.store.dispatch(updateName(name.value));
+    console.log(updateName({name:name.value}));
+    this.store.dispatch(updateName({name:name.value}));
   }
   updateEmail(email:any) {
     // this.store.dispatch({type:'updateEmail', payload:{email:email.value}});
-    this.store.dispatch(updateEmail(email.value));
+    this.store.dispatch(updateEmail({email:email.value}));
 
   }
   updateMobile(mobile:any) {
     // this.store.dispatch({type:'updateMobile', payload:{mobile:mobile.value}});
-    this.store.dispatch(updateMobile(mobile.value));
+    this.store.dispatch(updateMobile({mobile:mobile.value}));
 
   }
 }
